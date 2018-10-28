@@ -1,0 +1,57 @@
+{
+  "_from": "gatsby-source-rss",
+  "_id": "gatsby-source-rss@1.0.0",
+  "_inBundle": false,
+  "_integrity": "sha1-Z8pqDYjRPB1ORhb/lPgHv2woTJE=",
+  "_location": "/gatsby-source-rss",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "gatsby-source-rss",
+    "name": "gatsby-source-rss",
+    "escapedName": "gatsby-source-rss",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/gatsby-source-rss/-/gatsby-source-rss-1.0.0.tgz",
+  "_shasum": "67ca6a0d88d13c1d4e4616ff94f807bf6c284c91",
+  "_spec": "gatsby-source-rss",
+  "_where": "/Users/jason/Documents/GitHub/whatshappening",
+  "author": {
+    "name": "Jonathan Dubin",
+    "email": "jonathan.dubin@gmail.com"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "rss-parser": "^2.10.1"
+  },
+  "deprecated": false,
+  "description": "Gatsby source plugin for building websites using RSS feeds as a data source",
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^15.0.2",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-react": "^7.1.0"
+  },
+  "keywords": [
+    "gatsby",
+    "gatsby-plugin",
+    "gatsby-source-plugin"
+  ],
+  "license": "MIT",
+  "name": "gatsby-source-rss",
+  "scripts": {
+    "build": "babel src --out-dir .",
+    "lint": "eslint src/",
+    "watch": "babel -w src --out-dir ."
+  },
+  "version": "1.0.0"
+}
