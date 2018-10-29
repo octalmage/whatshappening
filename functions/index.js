@@ -5,10 +5,10 @@ const request = require('request');
 // Create and Deploy Your First Cloud Functions
 // https://firebase.google.com/docs/functions/write-firebase-functions
 
-exports.Check = functions.https.onRequest((request, response) => {
-  return pullFeed('http://www.austintexas.gov/department/events/1807/rss.xml')
-    .then(feed => console.log(feed) || response.send(feed));
-});
+// exports.Check = functions.https.onRequest((request, response) => {
+//   return pullFeed('http://www.austintexas.gov/department/events/1807/rss.xml')
+//     .then(feed => console.log(feed) || response.send(feed));
+// });
 
 
 

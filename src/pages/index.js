@@ -47,13 +47,6 @@ const Index = ({ classes, data: { allRssItem: { edges: events } } }) => {
         />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" />
       </Helmet>
-      {/* <AppBar position="static" color="default">
-        <Toolbar>
-          <Typography variant="h6" color="inherit">
-            What's Happening?
-          </Typography>
-        </Toolbar>
-      </AppBar> */}
       <List items={events} />
     </div>
   );

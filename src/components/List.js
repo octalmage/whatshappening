@@ -66,7 +66,6 @@ function BottomAppBar(props) {
               {id === 1 && <ListSubheader className={classes.subHeader}>Today</ListSubheader>}
               {id === 3 && <ListSubheader className={classes.subHeader}>Tomorrow</ListSubheader>}
               <ListItem button>
-                {/* <Avatar alt="Profile Picture" src={person} /> */}
                 <ListItemText primary={title} secondary={date} />
               </ListItem>
             </Fragment>
