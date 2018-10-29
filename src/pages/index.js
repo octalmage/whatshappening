@@ -10,8 +10,6 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import { graphql } from 'gatsby';
 
-import groupBy from 'lodash/fp/groupby';
-
 import List from '../components/List';
 
 const styles = {
