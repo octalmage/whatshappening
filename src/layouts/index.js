@@ -21,6 +21,7 @@ const styles = theme => ({
 const Layout = ({ classes, items, children, location }) => (
     <React.Fragment>
         <Helmet>
+            <title>What's Happening?</title>
             <meta
                 name="viewport"
                 content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no"
