@@ -21,7 +21,6 @@ exports.createPages = ({ graphql, actions }) => {
           console.log(result.errors);
           reject(result.errors);
         }
-        console.log(result);
         // Create Page pages.
         const eventTemplate = path.resolve('./src/templates/event.js');
         _.each(result.data.allRssItem.edges, (edge) => {

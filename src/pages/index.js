@@ -9,7 +9,6 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import { graphql } from 'gatsby';
 
-import Layout from '../components/Layout';
 import List from '../components/List';
 
 const styles = {
@@ -34,11 +33,9 @@ const styles = {
 
 const Index = ({ classes, data: { allRssItem: { edges: events } } }) => {
   return (
-    <Layout>
-      <div className={classes.root}>
-        <List items={events} />
-      </div>
-    </Layout>
+    <div className={classes.root}>
+      <List items={events} />
+    </div>
   );
 }
 

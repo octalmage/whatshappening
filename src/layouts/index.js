@@ -5,7 +5,7 @@ import { withStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
-import PageTransition from 'gatsby-plugin-page-transitions';
+import Transition from '../components/Transition';
 
 const styles = theme => ({
     text: {
@@ -18,7 +18,7 @@ const styles = theme => ({
     },
 });
 
-const Layout = ({ classes, items, children }) => (
+const Layout = ({ classes, items, children, location }) => (
     <React.Fragment>
         <Helmet>
             <meta
@@ -32,7 +32,7 @@ const Layout = ({ classes, items, children }) => (
             <Typography className={classes.text} variant="h5" gutterBottom>
                 What's Happening?
         </Typography>
-            <PageTransition>{children}</PageTransition>
+            <Transition location={location}>{children}</Transition>
         </Paper>
     </React.Fragment>
 );

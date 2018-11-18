@@ -7,6 +7,11 @@ module.exports = {
         rssURL: 'http://www.austintexas.gov/department/events/1807/rss.xml'
       }
     },
-    'gatsby-plugin-page-transitions',
+    {
+      resolve: `gatsby-plugin-layout`,
+      options: {
+        component: require.resolve(`./src/layouts/index.js`),
+      },
+    },
   ]
 }
