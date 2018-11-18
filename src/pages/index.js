@@ -1,5 +1,4 @@
 import React from 'react';
-import Helmet from 'react-helmet';
 import { withStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
@@ -10,6 +9,7 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import { graphql } from 'gatsby';
 
+import Layout from '../components/Layout';
 import List from '../components/List';
 
 const styles = {
@@ -33,20 +33,12 @@ const styles = {
 };
 
 const Index = ({ classes, data: { allRssItem: { edges: events } } }) => {
-
-
-  const bull = <span className={classes.bullet}>•</span>;
   return (
-    <div className={classes.root}>
-      <Helmet>
-        <meta
-          name="viewport"
-          content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no"
-        />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" />
-      </Helmet>
-      <List items={events} />
-    </div>
+    <Layout>
+      <div className={classes.root}>
+        <List items={events} />
+      </div>
+    </Layout>
   );
 }
 

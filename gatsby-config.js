@@ -7,5 +7,6 @@ module.exports = {
         rssURL: 'http://www.austintexas.gov/department/events/1807/rss.xml'
       }
     },
+    'gatsby-plugin-page-transitions',
   ]
 }
