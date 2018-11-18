@@ -2,7 +2,7 @@ import React from 'react';
 import { Animated } from 'react-web-animation';
 
 
-export default class Transition extends React.PureComponent {
+export default class Transition extends React.Component {
 
   getKeyFrames() {
     return [

@@ -22,7 +22,7 @@ const EventTemplate = ({ classes, data: { rssItem } }) => {
       <Typography variant="h3" gutterBottom>
         Closures
       </Typography>
-      <p dangerouslySetInnerHTML={
+      <Typography dangerouslySetInnerHTML={
         { 
           __html: rssItem.closures.replace(/(?:\r\n|\r|\n)/g, () => {
             let value = '';
