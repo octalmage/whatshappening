@@ -8,10 +8,12 @@ module.exports = {
       }
     },
     {
-      resolve: `gatsby-plugin-layout`,
+      resolve: 'gatsby-plugin-layout',
       options: {
-        component: require.resolve(`./src/layouts/index.js`),
+        component: require.resolve('./src/layouts/index.js'),
       },
     },
+    '@wapps/gatsby-plugin-material-ui',
+    'gatsby-plugin-offline',
   ]
 }
