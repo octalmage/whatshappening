@@ -33,7 +33,7 @@ const Layout = ({ classes, items, children, location }) => (
             <Typography className={classes.text} variant="h5" gutterBottom>
                 What's Happening?
         </Typography>
-            <Transition location={location}>{children}</Transition>
+            <div>{children}</div>
         </Paper>
     </React.Fragment>
 );
