@@ -1,8 +1,9 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import { graphql } from 'gatsby';
+import { graphql, navigate } from 'gatsby';
 import { withStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
+import Button from '@material-ui/core/Button';
 
 const styles = theme => ({
   root: {
@@ -22,7 +23,7 @@ const EventTemplate = ({ classes, data: { rssItem } }) => {
         Closures
       </Typography>
       <Typography dangerouslySetInnerHTML={
-        { 
+        {
           __html: rssItem.closures.replace(/(?:\r\n|\r|\n)/g, () => {
             let value = '';
             if (i % 2 === 0) {
@@ -32,9 +33,19 @@ const EventTemplate = ({ classes, data: { rssItem } }) => {
             }
             i = i + 1;
             return value;
-          }) 
+          })
         }
       } />
+      <Button 
+        variant="outlined" 
+        rel="noopener noreferrer" 
+        href={rssItem.link} 
+        className={classes.button}
+        target="_blank"
+        color="primary"
+      >
+        Learn More
+      </Button>
     </div>
   );
 };
@@ -49,6 +60,7 @@ export const pageQuery = graphql`
     title
     mainDate
     closures
+    link
   }
 }
 `;

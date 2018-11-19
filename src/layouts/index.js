@@ -4,6 +4,7 @@ import Helmet from 'react-helmet';
 import { withStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Paper from '@material-ui/core/Paper';
+import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import Transition from '../components/Transition';
 import Icon from '../web_hi_res_512.png';
@@ -32,6 +33,9 @@ const styles = theme => ({
     right: {
         flex: 1,
     },
+    button: {
+        margin: theme.spacing.unit,
+    },
 });
 
 const Layout = ({ classes, items, children, location }) => (
@@ -51,12 +55,13 @@ const Layout = ({ classes, items, children, location }) => (
             <div className={classes.head}>
                 <div className={classes.back}>
                     {location.pathname !== '/' &&
-                        <button
-                            className={classes.back}
+                        <Button 
+                            variant="outlined" 
+                            className={classes.button} 
                             onClick={() => window.history.back()}
                         >
                             Back
-                    </button>
+                        </Button>
                     }
                 </div>
 
