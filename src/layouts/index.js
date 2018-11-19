@@ -48,6 +48,7 @@ const Layout = ({ classes, items, children, location }) => (
             />
             <meta name="apple-mobile-web-app-capable" content="yes" />
             <link rel="apple-touch-icon-precomposed" href={Icon} /> 
+            <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
             <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" />
         </Helmet>
         <CssBaseline />
