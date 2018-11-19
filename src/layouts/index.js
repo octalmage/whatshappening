@@ -65,7 +65,7 @@ const Layout = ({ classes, items, children, location }) => (
                     }
                 </div>
 
-                <Typography className={classes.text} variant="h6" gutterBottom>
+                <Typography className={classes.text} variant="h5" gutterBottom>
                     <div className={classes.back}>What's Happening?</div>
                 </Typography>
                 <div className={classes.right} />
