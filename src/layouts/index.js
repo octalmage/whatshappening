@@ -6,6 +6,7 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import Transition from '../components/Transition';
+import Icon from '../web_hi_res_512.png';
 
 const styles = theme => ({
     text: {
@@ -41,6 +42,8 @@ const Layout = ({ classes, items, children, location }) => (
                 name="viewport"
                 content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no"
             />
+            <meta name="apple-mobile-web-app-capable" content="yes" />
+            <link rel="apple-touch-icon" href={Icon} /> 
             <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" />
         </Helmet>
         <CssBaseline />
