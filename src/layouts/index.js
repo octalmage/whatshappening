@@ -9,12 +9,27 @@ import Transition from '../components/Transition';
 
 const styles = theme => ({
     text: {
-        paddingTop: theme.spacing.unit * 2,
-        paddingLeft: theme.spacing.unit * 2,
-        paddingRight: theme.spacing.unit * 2,
+        padding: theme.spacing.unit / 2,
     },
     paper: {
         paddingBottom: 50,
+    },
+    head: {
+        display: 'flex',
+        backgroundColor: 'white',
+        borderBottom: '1px solid black',
+        boxSizing: 'border-box',
+        position: '-webkit-sticky',
+        position: 'sticky',
+        top: 0,
+        zIndex: '10',
+    },
+    back: {
+        padding: theme.spacing.unit,
+        flex: 1,
+    },
+    right: {
+        flex: 1,
     },
 });
 
@@ -30,9 +45,23 @@ const Layout = ({ classes, items, children, location }) => (
         </Helmet>
         <CssBaseline />
         <Paper square className={classes.paper}>
-            <Typography className={classes.text} variant="h5" gutterBottom>
-                What's Happening?
-        </Typography>
+            <div className={classes.head}>
+                <div className={classes.back}>
+                    {location.pathname !== '/' &&
+                        <button
+                            className={classes.back}
+                            onClick={() => window.history.back()}
+                        >
+                            Back
+                    </button>
+                    }
+                </div>
+
+                <Typography className={classes.text} variant="h6" gutterBottom>
+                    <div className={classes.back}>What's Happening?</div>
+                </Typography>
+                <div className={classes.right} />
+            </div>
             <div>{children}</div>
         </Paper>
     </React.Fragment>

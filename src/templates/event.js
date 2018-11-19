@@ -14,12 +14,11 @@ const EventTemplate = ({ classes, data: { rssItem } }) => {
   let i = 0;
   return (
     <div className={classes.root}>
-      <button onClick={() => window.history.back()}>Back</button>
-      <Typography variant="h2" gutterBottom>
+      <Typography variant="h3" gutterBottom>
         {rssItem.title}
       </Typography>
       <div>{rssItem.date} | {rssItem.mainDate}</div>
-      <Typography variant="h3" gutterBottom>
+      <Typography variant="h4" gutterBottom>
         Closures
       </Typography>
       <Typography dangerouslySetInnerHTML={
