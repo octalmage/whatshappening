@@ -23,7 +23,7 @@ module.exports = {
         background_color: '#f7f0eb',
         theme_color: '#a2466c',
         display: 'standalone',
-        icon: 'static/web_hi_res_512_precomposed.png',
+        icon: 'static/icon-precomposed.png',
       },
     },
     {
