@@ -51,7 +51,7 @@ const Layout = ({ classes, items, children, location }) => (
         <Paper square className={classes.paper}>
             <div className={classes.head}>
                 <div className={classes.back}>
-                    {location.pathname && location.pathname !== '/' &&
+                    {location.pathname && (location.pathname !== '/' && location.pathname !== '/offline-plugin-app-shell-fallback/') &&
                         <Button 
                             variant="outlined" 
                             className={classes.button} 
