@@ -1,12 +1,10 @@
-import React, { Fragment } from 'react';
-import PropTypes from 'prop-types';
+import React from 'react';
 import Helmet from 'react-helmet';
 import { withStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Paper from '@material-ui/core/Paper';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-import Transition from '../components/Transition';
 
 
 const styles = theme => ({
@@ -21,7 +19,6 @@ const styles = theme => ({
         backgroundColor: 'white',
         borderBottom: '1px solid black',
         boxSizing: 'border-box',
-        position: '-webkit-sticky',
         position: 'sticky',
         top: 0,
         zIndex: '10',
