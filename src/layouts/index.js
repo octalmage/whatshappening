@@ -10,6 +10,7 @@ import Typography from '@material-ui/core/Typography';
 const styles = theme => ({
     text: {
         padding: theme.spacing.unit / 2,
+        fontFamily: "'Roboto', sans-serif",
     },
     paper: {
         paddingBottom: 50,
@@ -61,10 +62,7 @@ const Layout = ({ classes, items, children, location }) => (
                         </Button>
                     }
                 </div>
-
-                <Typography className={classes.text} variant="h4" gutterBottom>
-                    <div className={classes.back}>What's Happening?</div>
-                </Typography>
+                <h2 className={classes.text}>What's Happening?</h2>
                 <div className={classes.right} />
             </div>
             <div>{children}</div>
