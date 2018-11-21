@@ -6,7 +6,7 @@ import Button from '@material-ui/core/Button';
 
 const styles = theme => ({
   root: {
-    paddingLeft: theme.spacing.unit * 2,
+    padding: theme.spacing.unit * 2,
   },
 });
 
