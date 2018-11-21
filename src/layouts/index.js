@@ -54,7 +54,7 @@ const Layout = ({ classes, items, children, location }) => (
         <Paper square className={classes.paper}>
             <div className={classes.head}>
                 <div className={classes.back}>
-                    {console.log(location) || location.pathname && location.pathname !== '/' &&
+                    {location.pathname && location.pathname !== '/' &&
                         <Button 
                             variant="outlined" 
                             className={classes.button} 
@@ -65,7 +65,7 @@ const Layout = ({ classes, items, children, location }) => (
                     }
                 </div>
 
-                <Typography className={classes.text} variant="h5" gutterBottom>
+                <Typography className={classes.text} variant="h4" gutterBottom>
                     <div className={classes.back}>What's Happening?</div>
                 </Typography>
                 <div className={classes.right} />
