@@ -45,7 +45,7 @@ const Layout = ({ classes, items, children, location }) => (
             />
             <meta name="apple-mobile-web-app-capable" content="yes" />
             <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-            <link rel="stylesheet" rel="preload" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" />
+            <link rel="stylesheet" rel="preload" as="font" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" />
         </Helmet>
         <CssBaseline />
         <Paper square className={classes.paper}>
