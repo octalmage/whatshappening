@@ -7,7 +7,7 @@ import Paper from '@material-ui/core/Paper';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import Transition from '../components/Transition';
-import Icon from '../web_hi_res_512.png';
+
 
 const styles = theme => ({
     text: {
@@ -47,15 +47,14 @@ const Layout = ({ classes, items, children, location }) => (
                 content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no"
             />
             <meta name="apple-mobile-web-app-capable" content="yes" />
-            <link rel="apple-touch-icon-precomposed" href={Icon} /> 
-            <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+            <meta name="apple-mobile-web-app-status-bar-style" content="default" />
             <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" />
         </Helmet>
         <CssBaseline />
         <Paper square className={classes.paper}>
             <div className={classes.head}>
                 <div className={classes.back}>
-                    {location.pathname !== '/' &&
+                    {console.log(location) || location.pathname && location.pathname !== '/' &&
                         <Button 
                             variant="outlined" 
                             className={classes.button} 
