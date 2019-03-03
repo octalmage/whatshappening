@@ -35,6 +35,7 @@ const EventTemplate = ({ classes, data: { rssItem } }) => {
           })
         }
       } />
+      <hr />
       <Button 
         variant="outlined" 
         rel="noopener noreferrer" 
