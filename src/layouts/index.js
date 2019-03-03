@@ -47,6 +47,18 @@ const Layout = ({ classes, items, children, location }) => (
             <meta name="apple-mobile-web-app-capable" content="yes" />
             <meta name="apple-mobile-web-app-status-bar-style" content="default" />
             <link rel="stylesheet" rel="preload" as="font" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" />
+            <script type="text/javascript">
+    window.doorbellOptions = {
+        id: '10123',
+        appKey: 'EtyyCdm1tiwNBlifivQOCvdYHoAULrZTnWrkW8a93pTFvEZErqxYhmkDq5XFFt25'
+    };
+    (function(w, d, t) {
+        var hasLoaded = false;
+        function l() { if (hasLoaded) { return; } hasLoaded = true; window.doorbellOptions.windowLoaded = true; var g = d.createElement(t);g.id = 'doorbellScript';g.type = 'text/javascript';g.async = true;g.src = 'https://embed.doorbell.io/button/'+window.doorbellOptions['id']+'?t='+(new Date().getTime());(d.getElementsByTagName('head')[0]||d.getElementsByTagName('body')[0]).appendChild(g); }
+        if (w.attachEvent) { w.attachEvent('onload', l); } else if (w.addEventListener) { w.addEventListener('load', l, false); } else { l(); }
+        if (d.readyState == 'complete') { l(); }
+    }(window, document, 'script'));
+</script>
         </Helmet>
         <CssBaseline />
         <Paper square className={classes.paper}>
