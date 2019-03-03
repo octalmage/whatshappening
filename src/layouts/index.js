@@ -4,7 +4,7 @@ import { withStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Paper from '@material-ui/core/Paper';
 import Button from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Typography';
+import ContentLoader from 'react-content-loader';
 
 
 const styles = theme => ({
@@ -36,7 +36,7 @@ const styles = theme => ({
     },
 });
 
-const Layout = ({ classes, items, children, location }) => (
+const Layout = ({ classes, items, children, location }) => console.log(children) || (
     <React.Fragment>
         <Helmet>
             <title>What's Happening?</title>
@@ -52,7 +52,7 @@ const Layout = ({ classes, items, children, location }) => (
         <Paper square className={classes.paper}>
             <div className={classes.head}>
                 <div className={classes.back}>
-                    {location.pathname && (location.pathname !== '/' && location.pathname !== '/offline-plugin-app-shell-fallback/') &&
+                    {location.pathname !== '/' && location.pathname !== '/offline-plugin-app-shell-fallback/' &&
                         <Button 
                             variant="outlined" 
                             className={classes.button} 
@@ -65,7 +65,12 @@ const Layout = ({ classes, items, children, location }) => (
                 <h2 className={classes.text}>What's Happening?</h2>
                 <div className={classes.right} />
             </div>
-            <div>{children}</div>
+            <div>{children}
+            {location.pathname === '/offline-plugin-app-shell-fallback/' && 
+                <ContentLoader/>
+            }
+            </div>
+
         </Paper>
     </React.Fragment>
 );

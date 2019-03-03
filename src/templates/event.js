@@ -10,6 +10,7 @@ const styles = theme => ({
   },
 });
 
+
 const EventTemplate = ({ classes, data: { rssItem } }) => {
   let i = 0;
   return (
