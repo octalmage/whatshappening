@@ -21,7 +21,7 @@ module.exports = {
         short_name: "What's Happening",
         start_url: '/',
         background_color: '#f7f0eb',
-        theme_color: '#a2466c',
+        theme_color: '#bf5700',
         display: 'standalone',
         icon: 'static/icon-precomposed.png',
       },

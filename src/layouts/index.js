@@ -12,7 +12,7 @@ const styles = theme => ({
     text: {
         padding: theme.spacing.unit / 2,
         color: 'white',
-        // fontFamily: "'Roboto', sans-serif",
+        fontFamily: "'Roboto', sans-serif",
     },
     paper: {
         paddingBottom: 50,
@@ -42,13 +42,11 @@ const Layout = ({ classes, items, children, location }) => (
     <React.Fragment>
         <Helmet>
             <title>What's Happening?</title>
-            <meta
-                name="viewport"
-                content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no"
-            />
             <meta name="apple-mobile-web-app-capable" content="yes" />
             <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+            <meta name="apple-mobile-web-app-title" content="WAT" />
             <link rel="stylesheet" rel="preload" as="font" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" />
+            <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover" />
             <script type="text/javascript">{`
     window.doorbellOptions = {
         id: '10123',
