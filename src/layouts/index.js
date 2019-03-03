@@ -5,19 +5,21 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import Paper from '@material-ui/core/Paper';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import '../style.css';
 
 
 const styles = theme => ({
     text: {
         padding: theme.spacing.unit / 2,
-        fontFamily: "'Roboto', sans-serif",
+        color: 'white',
+        // fontFamily: "'Roboto', sans-serif",
     },
     paper: {
         paddingBottom: 50,
     },
     head: {
         display: 'flex',
-        backgroundColor: 'white',
+        backgroundColor: '#bf5700',
         borderBottom: '1px solid black',
         boxSizing: 'border-box',
         position: 'sticky',
@@ -47,7 +49,7 @@ const Layout = ({ classes, items, children, location }) => (
             <meta name="apple-mobile-web-app-capable" content="yes" />
             <meta name="apple-mobile-web-app-status-bar-style" content="default" />
             <link rel="stylesheet" rel="preload" as="font" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" />
-            <script type="text/javascript">
+            <script type="text/javascript">{`
     window.doorbellOptions = {
         id: '10123',
         appKey: 'EtyyCdm1tiwNBlifivQOCvdYHoAULrZTnWrkW8a93pTFvEZErqxYhmkDq5XFFt25'
@@ -58,16 +60,17 @@ const Layout = ({ classes, items, children, location }) => (
         if (w.attachEvent) { w.attachEvent('onload', l); } else if (w.addEventListener) { w.addEventListener('load', l, false); } else { l(); }
         if (d.readyState == 'complete') { l(); }
     }(window, document, 'script'));
-</script>
+    `}
+            </script>
         </Helmet>
         <CssBaseline />
         <Paper square className={classes.paper}>
             <div className={classes.head}>
                 <div className={classes.back}>
                     {location.pathname && (location.pathname !== '/' && location.pathname !== '/offline-plugin-app-shell-fallback/') &&
-                        <Button 
-                            variant="outlined" 
-                            className={classes.button} 
+                        <Button
+                            variant="outlined"
+                            className={classes.button}
                             onClick={() => window.history.back()}
                         >
                             Back

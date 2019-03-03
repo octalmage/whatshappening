@@ -42,7 +42,7 @@ const List = ({ classes, items }) => {
               {event.getTime() === today.getTime() && !printed.today && (printed.today = true) && <ListSubheader className={classes.subHeader}>Today</ListSubheader>}
               {event.getTime() === tomorrow.getTime() && !printed.tomorrow && (printed.tomorrow = true) && <ListSubheader className={classes.subHeader}>Tomorrow</ListSubheader>}
               {event.getTime() > tomorrow.getTime() && !printed.future && (printed.future = true) && <ListSubheader className={classes.subHeader}>Future</ListSubheader>}
-              <ListItem button onClick={() => navigate(`/event/${id}`)}>
+              <ListItem divider button onClick={() => navigate(`/event/${id}`)}>
                 <ListItemText primary={title} secondary={date} />
               </ListItem>
             </Fragment>
